@@ -1,0 +1,319 @@
+\usepackage{graphicx}
+\graphicspath{{pictures/}}% Specifies where pictures are stored
+\usepackage{docmute} % for muting preamble of input files
+\usepackage[top=0.65in,bottom=0.50in,left=0.75in,right=0.75in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage[shortlabels]{enumitem}
+
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+
+\usepackage{subcaption} % for \captionof command
+\usepackage{mathpazo} % Times
+\usepackage[T1]{fontenc}
+\usepackage[semibold]{raleway}
+
+\usepackage[usenames,dvipsnames,svgnames]{xcolor} % for colors
+\definecolor{ocre}{RGB}{0,135,255} % main color
+\definecolor{maincolor}{RGB}{0,145,255} % main color
+\definecolor{cqcqcq}{rgb}{0.75294117,0.75294117647,0.75294117647}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, arrows}
+
+\usepackage{xargs}
+\usepackage{colortbl} % for colored tables
+\usepackage{hyperref}
+%\hypersetup{
+    %colorlinks=true,
+    %linkcolor=blue,
+    %filecolor=magenta,
+    %urlcolor=cyan,
+%}
+
+
+
+
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set indent to zero, but save value just in case
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+\renewcommand{\indent}{\hspace*{\tindent}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcounter{ExampleCounter}[section]
+\newcommand{\example}{%
+  \vspace{4pt minus 3pt}
+  \par%
+  \refstepcounter{ExampleCounter}%
+  \noindent\textbf{Example~\arabic{ExampleCounter}.\,~}%
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% grid command
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\grid}[1]{%
+\begin{tikzpicture}
+  \draw[step=.5cm,cqcqcq,very thin] (-#1/2,-#1/2) grid (#1/2,#1/2);
+\end{tikzpicture}
+}
+
+
+\newcommandx{\cart}[3][2=1,3={}]{%
+\par
+\begin{tikzpicture}[scale=#2]
+  \draw[step=.5cm,cqcqcq,very thin] (-#1/2,-#1/2) grid (#1/2,#1/2);
+  \draw[<->, black] (-#1/2,0) -- (#1/2,0);
+  \draw[<->, black] (0, -#1/2) -- (0, #1/2);
+  #3
+\end{tikzpicture}
+\par
+}
+
+
+\newcommandx{\cartX}[6][5=1,6={}]{%
+\par
+\begin{tikzpicture}[scale=#5]
+  \draw[step=1cm,cqcqcq,very thin] (#1,#3) grid (#2,#4);
+  \draw[<->, black] (#1,0) -- (#2,0);
+  \draw[<->, black] (0, #3) -- (0, #4);
+  #6
+\end{tikzpicture}
+\par
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Headings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{titlesec}
+
+\titleformat{\chapter}[display]
+  {\sffamily\huge\bfseries}{\color{maincolor}
+  {\chaptertitlename\ \thechapter}}{0pt}{\Huge}[]
+\titleformat{\section}
+  {\sffamily\LARGE\bfseries}
+  {\color{maincolor}{\thesection}}{8pt}{}[]
+\titleformat{\subsection}
+  {\sffamily\Large\bfseries}{}{0ex}{}
+\titleformat{\subsubsection}
+  {\sffamily\normalsize\bfseries}{\thesubsubsection}{1ex}{}
+\titleformat{\paragraph}[runin]
+  {\sffamily\normalsize\bfseries}{\theparagraph}{1em}{}
+\titleformat{\subparagraph}
+  {\sffamily\LARGE\bfseries}
+  {\color{maincolor}{\thesection}}{8pt}{}[]
+
+\titlespacing*{\chapter} {0in}{0pt}{9pt}
+\titlespacing*{\section} {0in}{3.5ex plus 1ex minus .2ex}{3.3ex plus .2ex}
+\titlespacing*{\subsection} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{0.5ex plus .2ex}
+\titlespacing*{\paragraph} {0pt}{3.25ex plus 1ex minus .2ex}{1em}
+%\titlespacing*{\subparagraph} {\parindent}{3.25ex plus 1ex minus .2ex}{1em}
+\titlespacing*{\subparagraph} {-0in}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
+\renewcommand{\bottomtitlespace}{2.5in}
+%\newcommand{\sectionbreak}{\clearpage}
+%\newcommand{\chapterbreak}{\cleardoublepage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\setsection}[2]{%
+  \setcounter{chapter}{#1}
+  \setcounter{section}{#2}
+  \addtocounter{section}{-1}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Table of Contents Styling
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{titletoc} % Required for manipulating the table of contents
+\contentsmargin{0cm} % Removes the default margin
+
+
+% Part text styling
+\titlecontents{part}[0cm]
+{\addvspace{20pt}\centering\large\bfseries}
+{}
+{}
+{}
+
+% Chapter text styling
+\titlecontents{chapter}[1.00cm] % Indentation
+{\addvspace{5pt}\Large\sffamily\bfseries} % Spacing and font options for chapters
+{\color{maincolor}\contentslabel[\Large\thecontentslabel]{1.00cm}\color{maincolor}} % Chapter number
+{\color{maincolor}}
+{\color{maincolor}\Large\;\titlerule*[.5pc]{.}\;\thecontentspage} % Page number
+
+% Section text styling
+\titlecontents{section}[1.75em] % Indentation
+{\addvspace{5pt}\large\sffamily\bfseries} % Spacing and font options for chapters
+{\color{maincolor}\contentslabel[\large\thecontentslabel]{1.75em}\color{black}} % Chapter number
+{\color{black}}
+{\color{black}\large\;\titlerule*[.5pc]{.}\;\thecontentspage} % Page number
+[]
+
+% Subsection text styling
+\titlecontents{subsection}[1.75em] % Indentation
+{\addvspace{0pt}\sffamily\small} % Spacing and font options for subsections
+{} % Subsection number
+{}
+{\ \titlerule*[.5pc]{.}\;\thecontentspage} % Page number
+[]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PAGE HEADERS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{ifthen}
+\usepackage{fancyhdr} % Required for header and footer configuration
+
+\pagestyle{fancy}
+
+\renewcommand{\chaptermark}[1]{\markboth{\normalsize\bfseries\chaptername\ \thechapter\ \ #1}{}} % Chapter text font settings
+
+\renewcommand{\sectionmark}[1]{\markright{\normalsize\thesection\hspace{5pt}#1}{}} % Section text font settings
+\fancyhf{}
+
+
+\fancyhead[R]{\sffamily\rightmark\hspace{5ex}\thepage}
+%\fancyhead[L]{\ifthenelse{\isodd{\value{page}}}{}{\sffamily\thepage\hspace{5ex} \leftmark}}
+
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt} % Removes the rule in the footer
+
+\addtolength{\headheight}{2.5pt} % Increase the spacing around the header slightly
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% define a command to insert a blank page
+        \newcommand{\insertblankpage}{%
+          \newpage
+          \thispagestyle{empty}
+          \mbox{}
+        \addtocounter{page}{-1}
+          \newpage
+        }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Define Objectives Environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{environ}
+
+\NewEnviron{objectives}[1]{%
+\vspace{0.5em}
+\noindent\textbf{\sffamily\Large Objectives}
+
+\vspace{2mm}
+
+\noindent%
+#1
+
+\vspace{-2.5mm}
+\begin{multicols}{2}
+\begin{itemize}[nosep,leftmargin=10.0pt]
+    \BODY
+\end{itemize}
+\end{multicols}
+
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Create blue box for definitions and theorems
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\tikzstyle{bluebox} = [fill=ocre!10, draw=ocre, very thick,
+    rectangle, rounded corners, inner sep=10pt, inner ysep=5pt]
+\tikzstyle{fancytitle} =[fill=ocre, text=white, rounded corners,
+    inner ysep=3pt, inner xsep=5pt]
+
+
+
+\def\blueboxstring{bluebox}
+
+
+\newcommand{\bluebox}[2]{%
+\par
+\vspace{2mm minus 1mm}
+\begin{tikzpicture}%
+\node [bluebox] (box){%
+    \begin{minipage}{0.99\textwidth}%
+      \vspace{7pt}
+      #2
+    \end{minipage}
+};
+\node[fancytitle, right=10pt] at (box.north west) {%
+  #1
+};
+\end{tikzpicture}
+\par
+\vspace{2mm}
+}
+
+
+%\NewEnviron{bluebox}[1]{%
+%\par
+%\vspace{2mm minus 1mm}
+%\begin{tikzpicture}%
+%\node [bluebox] (box){%
+    %\begin{minipage}{0.99\textwidth}%
+      %\vspace{7pt}
+      %\expandafter\BODY
+    %\end{minipage}
+%};
+%\node[fancytitle, right=10pt] at (box.north west) {%
+  %#1
+%};
+%\end{tikzpicture}
+%\par
+%\vspace{2mm}
+%}
+
+
+%\let\blueboxenvironment\bluebox
+
+
+%\def\bluebox#1{%
+  %\ifx\@currenvir\blueboxstring%
+    %\blueboxenvironment
+  %\else
+    %\blueboxcommand
+  %\fi
+%}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Redefine vfill command to take optional parameter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\vfill}[1][1]{\vspace{\stretch{#1}}}
+
+\makeatother

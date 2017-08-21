@@ -1,0 +1,555 @@
+\documentclass[oneside,10pt]{book}
+\input{handouts}
+
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{subcaption}
+
+
+
+\title{Lecture Notes}
+\graphicspath{{3-4-lecture/}}
+
+\AtBeginDocument{%
+  \large
+}
+
+\begin{document}
+
+\setcounter{chapter}{3}
+\setcounter{section}{3}
+
+\section{Library of Functions and Piecewise Functions}
+
+
+\textit{Sometimes the questions are complicated and the answers are simple.}
+--Dr.~Suess
+
+
+\begin{objectives}
+{In this section we will}
+  \item
+    graph the library of functions.
+  \item
+    learn to graph piecewise functions.
+  \item
+    learn to construct piecewise functions.
+  \item
+    identify the $x$-intercept and $y$-intercept of a graph.
+\end{objectives}
+
+
+
+%TODO
+%\example
+%Graph
+%\cart{7}
+%\vfill
+%\vfill
+
+
+%\begin{multicols}{2}
+
+
+In this section you will need a laptop or tablet. We will be using an online
+graphing program called \href{https://www.desmos.com/calculator}{Desmos}. Go to
+\url{https://www.desmos.com/calculator}.
+
+
+\subsection{Identity Function}
+
+
+\example
+Graph
+$f(x) = x$.
+and state the domain and range of the function.
+\vspace{0.5em}
+
+\noindent
+\begin{center}
+
+\begin{minipage}{4.5cm}
+\refstepcounter{table} %% increment the 'table' counter first
+\arrayrulecolor{ocre} % <---
+\normalsize
+  \begin{tabular}{|p{3.5em}|p{3.5em}|p{4.0em}|}
+    %\hline
+ \rowcolor{ocre}
+ \hline
+ \multicolumn{3}{|m{1.05\linewidth}|}{\footnotesize\color{white}{\sffamily\tablename:}~Some
+   points on the graph of $y=x$.}\\
+ \hline
+ \rowcolor{ocre!20}
+ \hspace{2mm} $x$   & \hspace{2mm} $y$  & $(x,   y)$ \\
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+  \end{tabular}
+  %\caption{Some points on the graph of $x^2 + y^3 = 1$.}
+\arrayrulecolor{black} %
+\end{minipage}
+\hspace{1in}
+\begin{minipage}{.35\linewidth}
+  \centering
+  \cart{7}
+\end{minipage}%
+\end{center}
+
+\vfill
+
+
+
+
+\subsection{The Square Function}
+
+\example
+Graph
+$f(x) = x^2$
+and state the domain and range of the function.
+\vspace{0.5em}
+
+\noindent
+\begin{center}
+
+\begin{minipage}{4.5cm}
+\refstepcounter{table} %% increment the 'table' counter first
+\arrayrulecolor{ocre} % <---
+\normalsize
+  \begin{tabular}{|p{3.5em}|p{3.5em}|p{4.0em}|}
+    %\hline
+ \rowcolor{ocre}
+ \hline
+ \multicolumn{3}{|m{1.05\linewidth}|}{\footnotesize\color{white}{\sffamily\tablename:}~Some
+   points on the graph of $y = x^2$..}\\
+ \hline
+ \rowcolor{ocre!20}
+ \hspace{2mm} $x$   & \hspace{2mm} $y$  & $(x,   y)$ \\
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+  \end{tabular}
+  %\caption{Some points on the graph of $x^2 + y^3 = 1$.}
+\arrayrulecolor{black} %
+\end{minipage}
+\hspace{1in}
+\begin{minipage}{.35\linewidth}
+  \centering
+  \cart{7}
+\end{minipage}%
+\end{center}
+
+\vfill
+
+\subsection{The Cube Function}
+
+
+\example
+Graph
+$f(x) = x^3$.
+and state the domain and range of the function.
+\vspace{0.5em}
+
+\noindent
+\begin{center}
+
+\begin{minipage}{4.5cm}
+\refstepcounter{table} %% increment the 'table' counter first
+\arrayrulecolor{ocre} % <---
+\normalsize
+  \begin{tabular}{|p{3.5em}|p{3.5em}|p{4.0em}|}
+    %\hline
+ \rowcolor{ocre}
+ \hline
+ \multicolumn{3}{|m{1.05\linewidth}|}{\footnotesize\color{white}{\sffamily\tablename:}~Some
+   points on the graph of $y = x^3$.}\\
+ \hline
+ \rowcolor{ocre!20}
+ \hspace{2mm} $x$   & \hspace{2mm} $y$  & $(x,   y)$ \\
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+  \end{tabular}
+  %\caption{Some points on the graph of $x^2 + y^3 = 1$.}
+\arrayrulecolor{black} %
+\end{minipage}
+\hspace{1in}
+\begin{minipage}{.35\linewidth}
+  \centering
+  \cartX{-6}{6}{-9}{9}[0.6]
+\end{minipage}%
+\end{center}
+
+\vfill
+
+\subsection{The Square Root Function}
+
+\example
+Graph
+$f(x) = \sqrt{x}$
+and state the domain and range of the function.
+
+\vspace{0.5em}
+
+\noindent
+\begin{center}
+
+\begin{minipage}{4.5cm}
+\refstepcounter{table} %% increment the 'table' counter first
+\arrayrulecolor{ocre} % <---
+\normalsize
+  \begin{tabular}{|p{3.5em}|p{3.5em}|p{4.0em}|}
+    %\hline
+ \rowcolor{ocre}
+ \hline
+ \multicolumn{3}{|m{1.05\linewidth}|}{\footnotesize\color{white}{\sffamily\tablename:}~Some
+   points on the graph of $y = \sqrt{x}$.}\\
+ \hline
+ \rowcolor{ocre!20}
+ \hspace{2mm} $x$   & \hspace{2mm} $y$  & $(x,   y)$ \\
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+  \end{tabular}
+  %\caption{Some points on the graph of $x^2 + y^3 = 1$.}
+\arrayrulecolor{black} %
+\end{minipage}
+\hspace{1in}
+\begin{minipage}{.35\linewidth}
+  \centering
+  \cart{7}
+\end{minipage}%
+\end{center}
+
+
+\vfill
+
+
+\subsection{The Cube Root Function}
+
+\example
+Graph $f(x) = \sqrt[3]{x}$
+and state the domain and range of the function.
+\vspace{0.5cm}
+
+\noindent
+\hspace{5mm}
+\begin{minipage}{4.5cm}
+\refstepcounter{table} %% increment the 'table' counter first
+\arrayrulecolor{ocre} % <---
+\normalsize
+  \begin{tabular}{|p{3.5em}|p{3.5em}|p{4.0em}|}
+    %\hline
+ \rowcolor{ocre}
+ \hline
+ \multicolumn{3}{|m{1.05\linewidth}|}{\footnotesize\color{white}{\sffamily\tablename:}~Some
+   points on the graph of $y = \sqrt[3]{x}$.}\\
+ \hline
+ \rowcolor{ocre!20}
+ \hspace{2mm} $x$   & \hspace{2mm} $y$  & $(x,   y)$ \\
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+  \end{tabular}
+  %\caption{Some points on the graph of $x^2 + y^3 = 1$.}
+\arrayrulecolor{black} %
+\end{minipage}
+\hspace{10mm}
+\begin{minipage}{.35\linewidth}
+  \centering
+  \cartX{-9}{9}{-5}{5}[0.6]
+\end{minipage}%
+
+
+\vfill
+
+
+\subsection{The Reciprocal Function}
+
+\example
+Graph $f(x) = \dfrac{1}{x}$
+and state the domain and range of the function.
+
+\noindent
+\begin{center}
+
+\begin{minipage}{4.5cm}
+\refstepcounter{table} %% increment the 'table' counter first
+\arrayrulecolor{ocre} % <---
+\normalsize
+  \begin{tabular}{|p{3.5em}|p{3.5em}|p{4.0em}|}
+    %\hline
+ \rowcolor{ocre}
+ \hline
+ \multicolumn{3}{|m{1.05\linewidth}|}{\footnotesize\color{white}{\sffamily\tablename:}~Some
+   points on the graph of $y = 1/x$.}\\
+ \hline
+ \rowcolor{ocre!20}
+ \hspace{2mm} $x$   & \hspace{2mm} $y$  & $(x,   y)$ \\
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+  \end{tabular}
+  %\caption{Some points on the graph of $x^2 + y^3 = 1$.}
+\arrayrulecolor{black} %
+\end{minipage}
+\hspace{1in}
+\begin{minipage}{.35\linewidth}
+  \centering
+  \cart{7}
+\end{minipage}%
+\end{center}
+
+\vfill
+
+
+\subsection{Absolute Value Function}
+
+\example
+Graph
+$f(x) = \left| x \right|$.
+\vspace{0.5em}
+
+\noindent
+\begin{center}
+
+\begin{minipage}{4.5cm}
+\refstepcounter{table} %% increment the 'table' counter first
+\arrayrulecolor{ocre} % <---
+\normalsize
+  \begin{tabular}{|p{3.5em}|p{3.5em}|p{4.0em}|}
+    %\hline
+ \rowcolor{ocre}
+ \hline
+ \multicolumn{3}{|m{1.05\linewidth}|}{\footnotesize\color{white}{\sffamily\tablename:}~Some
+   points on the graph of $y = \left| x \right|$.}\\
+ \hline
+ \rowcolor{ocre!20}
+ \hspace{2mm} $x$   & \hspace{2mm} $y$  & $(x,   y)$ \\
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+    \rule{0in}{2.0em}   &   &  \\ \hline
+  \end{tabular}
+  %\caption{Some points on the graph of $x^2 + y^3 = 1$.}
+\arrayrulecolor{black} %
+\end{minipage}
+\hspace{1in}
+\begin{minipage}{.35\linewidth}
+  \centering
+  \cart{7}
+\end{minipage}%
+\end{center}
+
+\vfill
+
+
+\subsection{Piecewise Functions}
+
+Sometimes a function is defined by using different equations on different parts
+of its domain.   These are called \textbf{piecewise functions}.
+
+
+
+\example
+The absolute value function
+$f(x) = \lvert x \rvert$
+can be defined as a piecewise function using two equations:
+$f(x) = x$ if $x \geq 0$  and $f(x) = -x$ if $x < 0$.
+For convenience, this is combined into one expression as
+\[f(x) = \lvert x \rvert =
+  \left\{
+      \begin{array}{lr}%
+        x  & \text{if} \quad  x \geq 0 \\
+       -x  & \text{if} \quad  x < 0. \\
+      \end{array}
+    \right.
+  \]
+
+\cart{5}[1.4]
+
+\vfill
+
+
+
+\example
+Graph the piecewise function defined by
+  \[f(x) = \left\{
+      \begin{array}{lr}%
+        1 & \text{if} \quad  x < 2 \\
+         - 3 & \text{if} \quad  x \geq 2. \\
+      \end{array}
+    \right.
+  \]
+
+\cart{7}
+\vfill
+
+
+
+\newpage
+
+
+\example
+Graph the piecewise function defined by
+  \[f(x) = \left\{
+      \begin{array}{lr}%
+        x^2-4 & \text{if} \quad  x < 2 \\
+        x - 3 & \text{if} \quad  x \geq 2.
+      \end{array}
+    \right.
+  \]
+  \cart{7}
+  \vfill
+
+
+
+
+\example
+A restaurant offers a buffet which costs $\$15$ per person.  For parties of $10$ or more people, a group discount applies, and the cost is $\$12.50$ per person.   Write a piecewise-defined linear function which calculates the total bill $T$ of a party of $n$ people who all choose the buffet.
+\vfill[2]
+
+
+\subsection{Analyzing a Piecewise Function}
+
+\example
+The function $f$ is defined as
+\[f(x) =
+  \left\{
+      \begin{array}{lrl}%
+        -2x + 1   & \text{if} \quad &  -3 \leq x \leq 0 \\
+         2        & \text{if} \quad &   x = 1 \\
+         x^2      & \text{if} \quad &   x > 1.
+      \end{array}
+    \right.
+  \]
+  \begin{enumerate}[a.]
+      \item
+        Find $f(-2)$, $f(1)$, $f(2)$.
+      \item
+        Determine the domain of $f$.
+      \item
+        Locate any intercepts.
+      \item
+        Graph  $f$.
+      \item
+        Use the graph to find the range of $f$.
+      \item
+          Is $f$ continuous on its domain?
+  \end{enumerate}
+
+
+  \cart{8}
+
+  \newpage
+
+
+\bluebox{$x$-intercept and $y$-intercept of a Graph}{%
+Suppose the graph of an equation is given.
+\begin{itemize}
+  \item
+    A point on a graph which is also on the $x$-axis is called an
+    $x$-\textbf{intercept}
+    of the graph.
+  \item
+    A point on a graph which is also on the $y$-axis is called an
+    $y$-\textbf{intercept}
+    of the graph.
+\end{itemize}
+
+
+To find the $x$-intercept of a graph, use the fact that any point $(x, y)$ on the
+$x$-axis has $y=0$.
+To find the $y$-intercept, use the fact that any point $(x, y)$ on the
+$y$-axis has $x=0$.
+}
+
+
+
+
+\example
+The graph of the equation $y =  -1 + \sqrt{4-x}$ is given below.
+Find the $x$-intercept and the $y$-intercept of the graph.
+
+\includegraphics{intercepts1}
+\vfill[1]
+
+
+
+
+
+
+\example
+The graph of the equation
+$y=2+ \dfrac{1}{1-x}$
+is given below.
+Find the $x$-intercept and the $y$-intercept of the graph.
+
+\includegraphics{intercepts2}
+\vfill
+
+
+\newpage
+
+
+
+\example
+Find the $x$-intercept and the $y$-intercept of the graph of
+$2x-3y=6$.
+Use the intercepts to graph the equation.
+
+\cart{6}
+\vfill
+
+
+%\example
+%The local pet shop charges $12$\textcent \, per cricket up to 100 crickets, and $10$\textcent \, per cricket thereafter.  Write a piecewise-defined linear function which calculates the price $P$, in dollars, of purchasing $c$ crickets.
+
+
+
+
+TODO
+\subsection*{Check yourself!}
+
+\noindent
+\begin{tabular}{@{}p{4.5in} c c c@{}}
+\textbf{Section Goals} & \textbf{Got It!} & \textbf{Getting It} & \textbf{Need Help}\\
+I can identify which relation are functions. & $\square$ & $\square$ & $\square $ \\
+I can identify the domain of a function that's been expressed as an equation. & $\square$ & $\square$ & $\square $ \\
+I understand what an expression such as $f(3)$ means. & $\square$ & $\square$ & $\square $ \\
+I know the difference between $f(2x)$ and $2f(x)$. & $\square$ & $\square$ & $\square $ \\
+
+
+\end{tabular}
+
+
+
+
+\end{document}

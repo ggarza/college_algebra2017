@@ -1,0 +1,459 @@
+\documentclass[oneside,10pt]{book}
+\input{handouts}
+
+\usepackage{booktabs}
+
+
+
+\AtBeginDocument{%
+  \large
+}
+
+\begin{document}
+
+\setsection{3}{5}
+\section{Graphing Transformations of Functions}
+
+
+\textit{Sometimes the questions are complicated and the answers are simple.}
+--Dr.~Suess
+
+
+\begin{objectives}
+{In this section we will}
+  \item
+    graph functions using Vertical and Horizontal shifts.
+  \columnbreak
+  \item
+    graph functions using Compressions and Stretches.
+  \item
+    graph functions using reflections.
+
+\end{objectives}
+
+
+
+
+
+
+In this section you will need a laptop or tablet. We will be using an online
+graphing program called \href{https://www.desmos.com/calculator}{Desmos}. Go to
+\url{https://www.desmos.com/calculator}.
+
+\vspace{5mm}
+
+\bluebox{Graphing Techniques}{%
+
+\begin{tabular}{@{}p{0.30\linewidth}p{0.65\linewidth}}
+   \textbf{To graph}:  & \textbf{Draw the graph of $f$ and:} \\
+   \midrule
+  \textbf{Vertical Shifts} \\
+  $g(x) = f(x) + k$,\;\; $k >0$ & Raise the graph of $f$  by $k$ units. \\
+  $g(x) = f(x) - k$,\;\; $k >0$ & Lower the graph of $f$  by $k$ units.\\
+  \\
+  \textbf{Horizontal Shifts} \\
+  $g(x) = f(x+h)$,\;\; $h >0$ & Shift the graph of $f$ to the left by $h$ units. \\
+  $g(x) = f(x-h)$,\;\; $h >0$ & Shift the graph of $f$ to the right by $h$ units.\\
+  \\
+  \textbf{Compression or Stretching} \\
+  $g(x) = af(x)$,\;\; $a >0$ & Stretch/shrink the graph of $f$ vertically by a
+  factor of $a$. \\
+  $g(x) = f(ax)$,\;\; $a >0$ & Stretch/shrink the graph of $f$ horizontally by a
+  factor of $1/a$. \\
+  \\
+  \textbf{Reflection about the $x$-axis} \\
+  $g(x) = -f(x)$ & Reflect the graph of $f$ about the $x$-axis (horizontal axis).\\
+  \\
+  \textbf{Reflection about the $y$-axis} \\
+  $g(x) = f(-x)$ & Reflect the graph of $f$ about the $y$-axis (vertical axis).
+\end{tabular}
+
+}
+
+
+\subsection{Vertical Shift}
+
+
+\example
+The graph of $f(x)=x^2$ is given below.  Fill in the table and graph the
+function $g(x) = x^2 + 3$.
+\vspace{0.5em}
+
+\noindent
+\begin{center}
+
+\begin{minipage}{4.5cm}
+  \begin{tabular}{|p{4.5em}|p{5.0em}|p{5.5em}|}
+ \hline
+ \hspace{1.7em} $x$   &  $y=g(x)$  & \hspace{1.5em}$(x,y)$ \\
+            &  $\phantom{y}=x^2+3$   &  \\
+ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+  \end{tabular}
+\end{minipage}
+\hspace{1.75in}
+\begin{minipage}{.35\linewidth}
+  \centering
+  \cartX{-4}{4}{-1}{12}[0.7][{\draw[<->, color=red, thick, domain=-3.1:3.1, samples=25,  line cap=round]
+            plot (\x, {\x *\x });}]
+\end{minipage}%
+\end{center}
+
+\vfill
+
+
+
+
+
+
+
+
+\example
+The graph of $f(x)=x^2$ is given below.  Fill in the table and graph the
+function $h(x) = x^2 - 3$.
+\vspace{0.5em}
+
+\noindent
+\begin{center}
+
+\begin{minipage}{4.5cm}
+  \begin{tabular}{|p{4.5em}|p{5.0em}|p{5.5em}|}
+ \hline
+ \hspace{1.7em} $x$   &  $y=h(x)$  & \hspace{1.5em}$(x,y)$ \\
+            &  $\phantom{y}=x^2-3$   &  \\
+ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+  \end{tabular}
+\end{minipage}
+\hspace{1.75in}
+\begin{minipage}{.35\linewidth}
+  \centering
+  \cartX{-4}{4}{-5}{10}[0.7][{\draw[<->, color=red, thick, domain=-3.1:3.1, samples=25,  line cap=round]
+            plot (\x, {\x *\x });}]
+\end{minipage}%
+\end{center}
+
+\vfill
+
+
+\subsection{Horizontal Shift}
+
+\example
+The graph of $f(x)=x^2$ is given below.  Fill in the table and graph the
+function $g(x) = (x-3)^2$.
+\vspace{0.5em}
+
+\noindent
+\hspace{2mm}
+\begin{minipage}{4.5cm}
+  \begin{tabular}{|p{2.5em}|p{5.5em}|p{5.5em}|}
+ \hline
+ \hspace{1.0em} $x$   &  $y=g(x)$  & \hspace{1.5em}$(x,y)$ \\
+            &  $\phantom{y}=(x-3)^2$   &  \\
+ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+  \end{tabular}
+\end{minipage}
+\hspace{1.10in}
+\begin{minipage}{.35\linewidth}
+  \centering
+  \cartX{-7}{7}{-1}{10}[0.7][{\draw[<->, color=red, thick, domain=-3.1:3.1, samples=25,  line cap=round]
+            plot (\x, {\x *\x });}]
+\end{minipage}%
+
+
+\vfill
+
+
+\example
+The graph of $f(x)=x^2$ is given below.  Fill in the table and graph the
+function $h(x) = (x+4)^2$.
+\vspace{0.5em}
+
+\noindent
+\hspace{2mm}
+\begin{minipage}{4.5cm}
+  \begin{tabular}{|p{2.5em}|p{5.5em}|p{5.5em}|}
+ \hline
+ \hspace{1.0em} $x$   &  $y=h(x)$  & \hspace{1.5em}$(x,y)$ \\
+            &  $\phantom{y}=(x+4)^2$   &  \\
+ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+  \end{tabular}
+\end{minipage}
+\hspace{1.10in}
+\begin{minipage}{.35\linewidth}
+  \centering
+  \cartX{-7}{7}{-1}{10}[0.7][{\draw[<->, color=red, thick, domain=-3.1:3.1, samples=25,  line cap=round]
+            plot (\x, {\x *\x });}]
+\end{minipage}%
+
+\vfill
+
+
+\subsection{Combining Vertical and Horizontal Shifts}
+
+\example
+The graph of $f(x)=x^2$ is given below.  Fill in the table and graph the
+function $g(x) = (x+3)^2-5$.
+\vspace{0.5em}
+
+\noindent
+\hspace{6mm}
+\begin{minipage}{4.5cm}
+  \begin{tabular}{|p{2.5em}|p{6.5em}|p{5.0em}|}
+ \hline
+ \hspace{0.5em} $x$   &  $y=g(x)$  & \hspace{1.5em}$(x,y)$ \\
+            &  \hspace{0.15em} $=(x+3)^2-5$   &  \\
+ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+  \end{tabular}
+\end{minipage}
+\hspace{1.20in}
+\begin{minipage}{.35\linewidth}
+  \centering
+  \cartX{-7}{7}{-6}{10}[0.6][{\draw[<->, color=red, thick, domain=-3.1:3.1, samples=25,  line cap=round]
+            plot (\x, {\x *\x });}]
+\end{minipage}%
+
+\vfill
+
+
+\subsection{Vertical Stretch}
+
+\example
+The graph of $f(x)=\lvert x \rvert$ is given below.  Fill in the table and graph the
+function $g(x) = 2 \lvert x \rvert$.
+\vspace{0.5em}
+
+\noindent
+\hspace{6mm}
+\begin{minipage}{4.5cm}
+  \begin{tabular}{|p{2.5em}|p{5.5em}|p{5.0em}|}
+ \hline
+ \hspace{0.5em} $x$   &  $y=g(x)$  & \hspace{1.5em}$(x,y)$ \\
+       &    $\phantom{y} = 2 \lvert x \rvert$   &  \\
+ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+  \end{tabular}
+\end{minipage}
+\hspace{1.20in}
+\begin{minipage}{.35\linewidth}
+  \centering
+  \cartX{-7}{7}{-1}{10}[0.6][{\draw[->, color=red, thick, domain=0:6.1, samples=25,  line cap=round]
+            plot (\x, {\x }); \draw[<-, color=red, thick, domain=-6.1:0, samples=25,  line cap=round]
+            plot (\x, {-\x });}]
+\end{minipage}%
+
+\vfill
+
+
+
+\subsection{Vertical Compression}
+
+\example
+The graph of $f(x)=\lvert x \rvert$ is given below.  Fill in the table and graph the
+function $h(x) = \frac{1}{2} \lvert x \rvert$.
+\vspace{0.5em}
+
+\noindent
+\hspace{6mm}
+\begin{minipage}{4.5cm}
+  \begin{tabular}{|p{2.5em}|p{5.5em}|p{5.0em}|}
+ \hline
+ \hspace{0.5em} $x$   &  $y=h(x)$  & \hspace{1.5em}$(x,y)$ \\
+       &    $\phantom{y} = \raisebox{-1.3ex}{\rule{0em}{1.7em}} \frac{1}{2} \lvert x \rvert$   &  \\
+ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+  \end{tabular}
+\end{minipage}
+\hspace{1.20in}
+\begin{minipage}{.35\linewidth}
+  \centering
+  \cartX{-7}{7}{-1}{10}[0.6][{\draw[->, color=red, thick, domain=0:6.1, samples=25,  line cap=round]
+            plot (\x, {\x }); \draw[<-, color=red, thick, domain=-6.1:0, samples=25,  line cap=round]
+            plot (\x, {-\x });}]
+\end{minipage}%
+
+\vfill
+
+
+\subsection{Horizontal Compression and Stretching}
+
+\example
+The graph of $y=f(x)$ is given below.  Use this graph to sketch graph of
+$y=f(2x)$ in the same space.
+\vspace{0.5em}
+
+
+{%
+  \centering
+\begin{tikzpicture}[yscale=2]
+  %\draw[ystep=1cm,xstep=3.14159cm/2, cqcqcq,very thin] (0,-1) grid (3*3.1415,1);
+  \draw[<->, black] (-1,0) -- (10,0);
+  \draw[<->, black] (0, -1.2) -- (0, 1.2);
+  \draw[-, color=red, thick, domain=0:9.42,samples=25,smooth,line cap=round]
+            plot (\x, {sin(deg(\x) });
+\end{tikzpicture}
+}
+\vfill
+
+
+\newpage
+
+
+\subsection{Reflection about the $x$-axis}
+
+\example
+The graph of $f(x)=x^2$ is given below.  Fill in the table and graph the
+function $g(x) = -x^2$.
+\vspace{0.5em}
+
+\noindent
+\begin{center}
+
+\begin{minipage}{4.5cm}
+  \begin{tabular}{|p{4.5em}|p{5.0em}|p{5.5em}|}
+ \hline
+ \hspace{1.7em} $x$   &  $y=g(x)$  & \hspace{1.5em}$(x,y)$ \\
+            &  $\phantom{y}=-x^2$   &  \\
+ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+  \end{tabular}
+\end{minipage}
+\hspace{1.75in}
+\begin{minipage}{.35\linewidth}
+  \centering
+  \cartX{-4}{4}{-6}{6}[0.7][{\draw[<->, color=red, thick, domain=-2.2:2.2, samples=25,  line cap=round]
+            plot (\x, {\x *\x });}]
+\end{minipage}%
+\end{center}
+
+\vfill
+
+\subsection{Reflection about the $y$-axis}
+
+\example
+The graph of $f(x)=\sqrt{x}$ is given below.  Fill in the table and graph the
+function $h(x) = \sqrt{-x}$.
+\vspace{0.5em}
+
+\noindent
+\begin{center}
+
+\begin{minipage}{4.5cm}
+  \begin{tabular}{|p{4.5em}|p{5.0em}|p{5.5em}|}
+ \hline
+ \hspace{1.7em} $x$   &  $y=h(x)$  & \hspace{1.5em}$(x,y)$ \\
+            &  $\phantom{y}=\sqrt{-x}$   &  \\
+ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+  \end{tabular}
+\end{minipage}
+\hspace{1.75in}
+\begin{minipage}{.35\linewidth}
+  \centering
+  \cartX{-5}{5}{-5}{5}[0.7][{\draw[->, color=red, thick, domain=0:2.2, samples=25,  line cap=round]
+            plot ({\x *\x }, \x);}]
+\end{minipage}%
+\end{center}
+
+\vfill
+
+
+\newpage
+
+
+\subsection{Combining Transformations}
+
+
+\example
+The graph of $f(x)=\sqrt{x}$ is given below.  Fill in the table and graph the
+function $g(x) = 2\sqrt{3-x } -4$.
+\vspace{0.5em}
+
+\noindent
+
+\begin{minipage}{6.0cm}
+  \begin{tabular}{|p{3.5em}|p{8.0em}|p{5.0em}|}
+ \hline
+ \hspace{1.7em} $x$   &  $y=g(x)$  & \hspace{1.5em}$(x,y)$ \\
+            &  $\phantom{y}=2\sqrt{3-x } -4$   &  \\
+ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+        \rule{0in}{2.0em}   &   &  \\ \hline
+  \end{tabular}
+\end{minipage}
+\hspace{1.00in}
+\begin{minipage}{.35\linewidth}
+  \cartX{-8}{5}{-8}{5}[0.7][{\draw[->, color=red, thick, domain=0:2.2, samples=25,  line cap=round]
+            plot ({\x *\x }, \x);}]
+\end{minipage}
+
+
+
+
+
+
+
+
+\end{document}

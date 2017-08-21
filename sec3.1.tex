@@ -1,0 +1,266 @@
+\documentclass[oneside,10pt]{book}
+\input{handouts}
+
+
+
+\title{3.1 Lecture Notes}
+\graphicspath{{3-1-lecture/}}
+
+\AtBeginDocument{%
+  \large
+}
+
+\begin{document}
+
+\setsection{3}{1}
+
+\section{Functions}
+
+\textit{One of the most important concepts in all of mathematics is that of
+  a function.} --T.P.~Dick and C.M.~Patton\\
+
+
+
+\begin{objectives}{In this section we will learn to}
+  \item
+    determine whether a relation is a function.
+  \item
+    determine the domain of function.
+  \item
+    use function notation.
+  \item
+    determine the domain of a function.
+  \item
+    determine the sum, difference, product, and quotient of two functions.
+\end{objectives}
+
+
+\bluebox{Definition -- Relation}{%
+A \textbf{relation} in Mathematics is a correspondence between two sets.
+}
+
+
+
+\subsection{Maps and Ordered Pairs as Relations}
+There are many different ways to represent relations.
+
+\example
+We can draw a correspondence between the set of states in the U.S. and a set
+containing number of representatives for each state.
+
+\begin{center}
+  \includegraphics[scale=0.8]{Picture1.png}
+\end{center}
+
+
+
+This relation can also be expressed as a set of ordered pairs:\\
+$\{
+(\text{Alaska}, 7),
+(\text{Arizona}, 8),
+(\text{California}, 53),
+(\text{Colorado}, 7),
+(\text{Florida}, 25),
+(\text{North Dakota}, 1)
+\}$
+
+
+\newpage
+
+
+\bluebox{Definition -- Function}{%
+  Suppose $A$ and $B$ are two non-empty sets.  A \textbf{function} from $A$ into
+  $B$ is a relation that associates elements of $A$ with exactly one element of
+  $B$.
+
+}
+
+\bluebox{Definition -- Domain and Range}{%
+  %TODO: Write better definition of domain and range.
+  From the previous definition, the set $A$ is known as the \textbf{domain} of the function.
+  For each element $x$ in $A$, the corresponding element $y$ in $B$ is known as the
+  \textbf{value} of the function at $x$ or the \textbf{image} of $x$.
+
+  The set of all images of the elements of the domain is known as the
+  \textbf{range} of the function.
+
+}
+
+\example
+Which of these diagrams depicts a function?
+
+{\centering
+\includegraphics[scale=0.7]{Picture2.png}\\
+\vspace{1cm}
+\includegraphics[scale=0.7]{Picture3.png}\\
+}
+
+
+
+\example
+True or False. Each student's exam grade is a function of the student's IQ.
+\vspace{1in}
+
+
+
+\example
+   Which of the following sets of ordered pairs describe a function?
+  \begin{enumerate}[a.]
+    \item  $A = \{ (-2,1), (1,3), (1,4), (3,-1) \}$
+    \item  $B = \{ (-2,1), (1,3), (2,3), (3,-1) \}$
+  \end{enumerate}
+
+  %\includegraphics{graphA}
+  %\includegraphics{graphB}
+
+%\bluebox{Vertical Line Test}{%
+ %A set of points in the plane represents $y$ as a function of $x$ if and only if
+ %no two points lie on the same vertical line.
+ %}
+
+
+
+%\example
+%Does the following graph represent a function?
+%\begin{center}
+%\includegraphics[width=0.50\textwidth]{verticalline.png}
+%\end{center}
+%\vspace{10mm}
+
+
+%\example
+%Does the following graph represent a function?
+%\begin{center}
+%\includegraphics[width=0.50\textwidth]{verticalline1.png}
+%\end{center}
+
+%\subsection{Domain and Rang}
+
+
+\subsection{Relations Defined by Equations}
+
+\example
+Is $y=5x+1$ a function?
+\vfill
+
+
+\example
+Is $y=x^2-1$ a function?
+\vfill
+
+
+\example
+Is $|y|=x$ a function?
+\vfill
+
+
+\example
+Is $x^2+y^2=1$ a function?
+\vfill
+
+
+
+\example
+Is $y=x^3-x+1$ a function?
+\vfill
+
+
+\newpage
+
+
+\subsection{Machine Interpretation of Functions}
+
+\url{https://youtu.be/VUTXsPFx-qQ?t=213}
+
+\includegraphics[width=0.5\linewidth]{3-1-lecture/001Production_Line.jpg}
+
+Sometimes it is useful to think of functions as machines on an assembly line:
+they take some input and produce some output. Like machines, functions have the
+following characteristics:
+
+\begin{enumerate}
+  \item
+    A function only accept certain things as inputs.
+    That is, only numbers from the domain are allowed as inputs.
+  \item
+    A function is consistent.
+    That is, for each input there is exactly one output.
+\end{enumerate}
+
+
+
+\subsection{Using Function Notation}
+
+It is customary to use letters, such as $f$, to label functions.
+We can think of a function $f$ as a process
+by which each input $x$ is matched with only one output $y$.
+Since the output is completely determined by the input $x$ and the process $f$, we symbolize the output with \textbf{function notation}: `$f(x)$', read `$f$ \textbf{of} $x$.'
+In other words, $f(x)$ is the output which results by applying the process $f$ to the input $x$.
+In this case, the parentheses here do not indicate multiplication, as they do elsewhere in Algebra.
+
+
+\example
+Suppose a function $g$ is described by applying the following steps,
+in sequence
+\begin{enumerate}
+  \item  add 4
+  \item  multiply by 3
+\end{enumerate}
+Determine $g(5)$ and find an expression for $g(x)$.
+\vfill
+
+
+\newpage
+
+
+\example
+Let $f(x) = x^2 +  4$.
+Find and simplify the following.
+\begin{enumerate}[(a)]
+  \item $f(-1)$,\ $f(0)$,\, $f(2)$
+  \item  $f(2x)$,\, $2 f(x)$
+  \item $f(x+2)$,\, $f(x)+2$,\, $f(x) + f(2)$
+\end{enumerate}
+\vfill
+
+\newpage
+
+
+\subsection{Finding the Domain of a Function}
+
+
+\example
+Find the domain of each of the following functions.
+
+\begin{enumerate}[(a)]
+  \item
+  $f(x) = x^2 + 5x $
+  \vfill
+  \item
+    $g(x) = \dfrac{x-1}{x+4}$
+  \vfill
+  \item
+    $h(x) = \sqrt{4 - 5x}$
+  \vfill
+
+\end{enumerate}
+
+
+\subsection*{Check yourself!}
+
+
+\begin{tabular}{@{}p{4.5in} c c c}
+\textbf{Section Goals} & \textbf{Got It!} & \textbf{Getting It} & \textbf{Need Help}\\
+I can identify which relation are functions. & $\square$ & $\square$ & $\square $ \\
+I can identify the domain of a function that's been expressed as an equation. & $\square$ & $\square$ & $\square $ \\
+I understand what an expression such as $f(3)$ means. & $\square$ & $\square$ & $\square $ \\
+I know the difference between $f(2x)$ and $2f(x)$. & $\square$ & $\square$ & $\square $ \\
+
+
+\end{tabular}
+
+
+
+
+
+\end{document}
