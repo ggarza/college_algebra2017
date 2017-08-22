@@ -316,4 +316,26 @@
 
 \renewcommand{\vfill}[1][1]{\vspace{\stretch{#1}}}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Define Goals Environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\goalnewline}{%
+& $\square$ & $\square$ & $\square $ \goalnewline@
+}
+
+\newenvironment{goals}
+  {\global\let\orignewline\\% Store meaning of \\ outside of tabular
+    \subsection*{Check yourself!}
+    \noindent
+    \begin{tabular}{@{}p{4.5in} c c c@{}} % Default paradigm tabular specification
+    \textbf{Section Goals} & \textbf{Got It!} & \textbf{Getting It} & \textbf{Need Help}\\ % First line
+      \midrule % Header rule
+    \global\let\goalnewline@\\
+    \global\let\\\goalnewline
+    }
+  {
+  \end{tabular}
+   \global\let\\\orignewline}% Restore meaning of \\ outside tabular
+
 \makeatother
